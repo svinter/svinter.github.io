@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photography — Steve Vinter</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .photo-grid img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      display: block;
+    }
+    .smugmug-link {
+      display: inline-block;
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--ink);
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 2px;
+    }
+    .smugmug-link:hover { color: var(--accent); border-bottom-color: var(--accent); }
+    @media (max-width: 500px) { .photo-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<nav>
+  <div class="container">
+    <a href="/" class="nav-name">Steve Vinter</a>
+    <ul class="nav-links">
+      <li><a href="/whatido/">What I do</a></li>
+      <li><a href="/photography/" class="active">Photography</a></li>
+      <li><a href="/resources/">Resources</a></li>
+      <li><a href="/schedule/">Schedule</a></li>
+      <li><a href="/about/">About</a></li>
+    </ul>
+  </div>
+</nav>
+<main>
+  <div class="container">
+    <h1 class="page-title">Photography</h1>
+    <p class="page-subtitle">Landscape and drone work, mostly from places I've been lucky enough to visit.</p>
+    <hr>
+    <div class="photo-grid">
+      <img src="https://images.squarespace-cdn.com/content/v1/5f66ae82c524cf0fc1cb99be/1600782397055-5T3VLUZGV9TY7RCNBRF8/Scotland-SV-12.jpg" alt="Scottish highlands">
+      <img src="https://images.squarespace-cdn.com/content/v1/5f66ae82c524cf0fc1cb99be/1600795352921-B0JRBWS16U1BPEV7WH1Q/Patagonia-new-17.jpg" alt="Patagonia">
+    </div>
+    <p>The full collection lives on SmugMug, organized by location and subject.</p>
+    <a href="https://vinter.smugmug.com/" target="_blank" rel="noopener" class="smugmug-link">View full gallery →</a>
+  </div>
+</main>
+<footer>
+  <div class="container">
+    <p>© 2025 Steve Vinter</p>
+    <p><a href="mailto:steve.vinter@gmail.com">steve.vinter@gmail.com</a></p>
+  </div>
+</footer>
+</body>
+</html>

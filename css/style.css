@@ -1,0 +1,312 @@
+/* stevevinter.com — shared stylesheet */
+/* Aesthetic: refined editorial minimalism */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap');
+
+/* ─── Variables ─────────────────────────────────────────────────── */
+:root {
+  --bg:        #faf9f7;
+  --ink:       #1a1a2e;
+  --ink-light: #5a5a6e;
+  --accent:    #7c6f5b;
+  --rule:      #e0ddd8;
+  --max-w:     780px;
+  --serif:     'Cormorant Garamond', Georgia, serif;
+  --sans:      'Inter', system-ui, sans-serif;
+}
+
+/* ─── Reset ─────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ─── Base ───────────────────────────────────────────────────────── */
+html { font-size: 18px; scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-weight: 300;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── Layout ─────────────────────────────────────────────────────── */
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ─── Navigation ─────────────────────────────────────────────────── */
+nav {
+  border-bottom: 1px solid var(--rule);
+  padding: 1.5rem 0;
+  position: sticky;
+  top: 0;
+  background: rgba(250, 249, 247, 0.95);
+  backdrop-filter: blur(8px);
+  z-index: 100;
+}
+
+nav .container {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.nav-name {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active { color: var(--ink); }
+
+/* ─── Minimal nav (private pages) ───────────────────────────────── */
+nav.minimal .nav-links { display: none; }
+
+/* ─── Hero ───────────────────────────────────────────────────────── */
+.hero {
+  width: 100%;
+  max-width: var(--max-w);
+  margin: 3rem auto 0;
+  padding: 0 2rem;
+}
+
+.hero img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  object-position: center 40%;
+  display: block;
+}
+
+/* ─── Typography ─────────────────────────────────────────────────── */
+h1, h2, h3, h4 {
+  font-family: var(--serif);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+h1 { font-size: 3rem; margin-bottom: 1.5rem; }
+h2 { font-size: 2rem; margin-bottom: 1rem; margin-top: 3rem; }
+h3 { font-size: 1.4rem; margin-bottom: 0.75rem; margin-top: 2rem; }
+
+.page-title {
+  font-family: var(--serif);
+  font-size: 3.5rem;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  margin: 3rem 0 0.5rem;
+  line-height: 1.1;
+}
+
+.page-subtitle {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--ink-light);
+  margin-bottom: 2.5rem;
+}
+
+p { margin-bottom: 1.25rem; }
+p:last-child { margin-bottom: 0; }
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+a:hover { border-bottom-color: var(--accent); }
+
+em { font-style: italic; }
+strong { font-weight: 500; }
+
+/* ─── Rule ───────────────────────────────────────────────────────── */
+hr {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 3rem 0;
+}
+
+/* ─── Main content ───────────────────────────────────────────────── */
+main {
+  padding: 3rem 0 6rem;
+}
+
+/* ─── Section blocks (home page) ────────────────────────────────── */
+.section-block {
+  padding: 3rem 0;
+  border-top: 1px solid var(--rule);
+}
+
+.section-block:first-child { border-top: none; }
+
+.section-label {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.section-block h2 {
+  margin-top: 0;
+  font-size: 1.75rem;
+}
+
+/* ─── Pull quote ─────────────────────────────────────────────────── */
+.pull-quote {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.35rem;
+  color: var(--ink-light);
+  border-left: 2px solid var(--accent);
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  margin: 2rem 0;
+  line-height: 1.5;
+}
+
+/* ─── Recipe ─────────────────────────────────────────────────────── */
+.recipe-ingredients,
+.recipe-directions {
+  margin-top: 2rem;
+}
+
+.recipe-ingredients h3,
+.recipe-directions h3 {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  margin-top: 0;
+  font-family: var(--sans);
+}
+
+.recipe-ingredients ul {
+  list-style: none;
+  padding: 0;
+}
+
+.recipe-ingredients li {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.95rem;
+}
+
+.recipe-ingredients li:last-child { border-bottom: none; }
+
+.recipe-directions ol {
+  padding-left: 1.5rem;
+}
+
+.recipe-directions li {
+  padding: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.recipe-source {
+  margin-top: 2.5rem;
+  font-size: 0.8rem;
+  color: var(--ink-light);
+  font-style: italic;
+}
+
+/* ─── Recipe index ───────────────────────────────────────────────── */
+.recipe-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+
+.recipe-list li {
+  border-top: 1px solid var(--rule);
+}
+
+.recipe-list li:last-child { border-bottom: 1px solid var(--rule); }
+
+.recipe-list a {
+  display: block;
+  padding: 1rem 0;
+  font-size: 1.1rem;
+  color: var(--ink);
+  border-bottom: none;
+  transition: color 0.2s, padding-left 0.2s;
+}
+
+.recipe-list a:hover {
+  color: var(--accent);
+  padding-left: 0.5rem;
+}
+
+/* ─── Resources list ─────────────────────────────────────────────── */
+.resource-section { margin-bottom: 3rem; }
+
+.resource-section h2 { font-size: 1.5rem; }
+
+/* ─── Footer ─────────────────────────────────────────────────────── */
+footer {
+  border-top: 1px solid var(--rule);
+  padding: 2rem 0;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+footer p {
+  font-size: 0.75rem;
+  color: var(--ink-light);
+  margin: 0;
+}
+
+footer a {
+  color: var(--ink-light);
+  border-bottom: none;
+}
+
+footer a:hover { color: var(--ink); }
+
+/* ─── Responsive ─────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  html { font-size: 16px; }
+  .page-title { font-size: 2.5rem; }
+  .hero img { height: 280px; }
+  nav .container { flex-direction: column; gap: 0.75rem; }
+  .nav-links { gap: 1.25rem; }
+}
