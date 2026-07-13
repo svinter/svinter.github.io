@@ -13,6 +13,7 @@
   --max-w:     780px;
   --serif:     'Cormorant Garamond', Georgia, serif;
   --sans:      'Inter', system-ui, sans-serif;
+  --heading:   #8b2635;
 }
 
 /* ─── Reset ─────────────────────────────────────────────────────── */
@@ -387,4 +388,17 @@ footer a:hover { color: var(--ink); }
 
 .recipe-body ol li {
   padding: 0.5rem 0;
+}
+
+/* ─── Recipe tree refinements ────────────────────────────────────── */
+.recipe-tree summary {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  color: var(--heading);
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+
+.recipe-tree .recipe-list {
+  padding-left: 1.5rem;
 }
