@@ -310,3 +310,81 @@ footer a:hover { color: var(--ink); }
   nav .container { flex-direction: column; gap: 0.75rem; }
   .nav-links { gap: 1.25rem; }
 }
+
+/* ─── Recipe tree (nested details/summary) ───────────────────────── */
+.recipe-tree {
+  margin-top: 1.5rem;
+}
+
+.recipe-tree details {
+  border-bottom: 1px solid var(--rule);
+}
+
+.recipe-tree summary {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  cursor: pointer;
+  padding: 1rem 0;
+  list-style: none;
+}
+
+.recipe-tree summary::-webkit-details-marker { display: none; }
+.recipe-tree summary::marker { content: ''; }
+
+.recipe-tree summary .count {
+  font-weight: 300;
+  color: var(--ink-light);
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.recipe-tree .recipe-list {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+/* ─── Recipe meta line ───────────────────────────────────────────── */
+.recipe-meta {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  color: var(--ink-light);
+  margin-bottom: 0;
+  margin-top: -1.5rem;
+}
+
+/* ─── Recipe notes (distinct from attribution) ───────────────────── */
+.recipe-notes {
+  margin-top: 2.5rem;
+  font-size: 0.8rem;
+  color: var(--ink-light);
+  font-style: italic;
+}
+
+/* ─── Unstructured recipe body ───────────────────────────────────── */
+.recipe-body {
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.recipe-body h3 {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  font-family: var(--sans);
+}
+
+.recipe-body ol {
+  padding-left: 1.5rem;
+}
+
+.recipe-body ol li {
+  padding: 0.5rem 0;
+}
